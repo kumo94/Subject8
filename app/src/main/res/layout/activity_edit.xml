@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1D48B6"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar"
+        android:text="名前"
+        android:textSize="@dimen/text_size"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/name_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/view_margin"
+        android:layout_marginEnd="0dp"
+        android:layout_toEndOf="@+id/name_text"
+        android:hint="入力して下さい"
+        android:textSize="@dimen/text_size"
+        android:visibility="visible"
+        android:layout_below="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/sex_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:gravity="center"
+        android:text="性別"
+        android:textSize="@dimen/text_size"
+        android:layout_below="@+id/name_text" />/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_toEndOf="@+id/sex_text"
+        android:layout_below="@+id/name_edit"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/view_margin">
+
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男性" />
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女性" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/mail_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_below="@+id/sex_text"
+        android:gravity="center"
+        android:text="メール"
+        android:textSize="@dimen/text_size" />
+
+    <EditText
+        android:id="@+id/mail_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/view_margin"
+        android:layout_marginEnd="0dp"
+        android:layout_toEndOf="@+id/mail_text"
+        android:hint="入力してください"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/mailMagazine_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_below="@+id/mail_text"
+        android:gravity="center"
+        android:textSize="@dimen/text_size"
+        android:text="メールマガ"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_mailMagazine"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_below="@+id/mail_edit"
+        android:layout_toRightOf="@+id/mailMagazine_text"
+        android:layout_marginStart="@dimen/view_margin"
+        android:textSize="@dimen/text_size"
+        android:text="受け取る"/>
+
+    <Button
+        android:id="@+id/decide_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mailMagazine_text"
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center"
+        android:text="確定" />
+
+</RelativeLayout>

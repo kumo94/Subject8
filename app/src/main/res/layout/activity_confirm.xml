@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1D48B6"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/name_text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:gravity="center"
+        android:textSize="@dimen/text_size"
+        android:layout_below="@+id/toolbar"
+        android:text="名前" />
+
+    <TextView
+        android:id="@+id/name_result"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_marginStart="@dimen/view_margin"
+        android:layout_toRightOf="@+id/name_text_result"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/sex_text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_below="@+id/name_text_result"
+        android:gravity="center"
+        android:textSize="@dimen/text_size"
+        android:text="性別" />
+
+    <TextView
+        android:id="@+id/sex_result"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_toRightOf="@+id/sex_text_result"
+        android:layout_below="@+id/name_result"
+        android:layout_marginStart="@dimen/view_margin"
+        android:gravity="center"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/mail_text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_below="@id/sex_text_result"
+        android:gravity="center"
+        android:textSize="@dimen/text_size"
+        android:text="メール" />
+
+    <TextView
+        android:id="@+id/mail_result"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_below="@+id/sex_result"
+        android:layout_toRightOf="@+id/mail_text_result"
+        android:layout_marginStart="@dimen/view_margin"
+        android:gravity="center"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/mailMagazine_text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_below="@+id/mail_text_result"
+        android:gravity="center"
+        android:textSize="@dimen/text_size"
+        android:text="メルマガ"/>
+
+    <TextView
+        android:id="@+id/mailMagazine_result"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_size"
+        android:layout_below="@+id/mail_result"
+        android:layout_toRightOf="@+id/mailMagazine_text_result"
+        android:layout_marginStart="@dimen/view_margin"
+        android:gravity="center"
+        android:textSize="@dimen/text_size" />
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mailMagazine_text_result"
+        android:layout_centerHorizontal="true"
+        android:text="編集"/>
+
+
+</RelativeLayout>
