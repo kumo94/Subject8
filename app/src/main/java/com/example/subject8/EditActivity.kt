@@ -3,17 +3,26 @@ package com.example.subject8
 import android.content.Intent
 import android.os.Bundle
 import android.preference.PreferenceManager
+import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 
 class EditActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit)
+
+        // ツールバーをアクションバーとしてセット
+        val Toolbar: Toolbar = findViewById<View>(R.id.toolbar) as Toolbar
+        setSupportActionBar(Toolbar)
+        // タイトルを設定
+        supportActionBar!!.setTitle("Exercise11_Preference")
+
 
         findViewById<Button>(R.id.decide_button).setOnClickListener {
             saveToPreference()
@@ -35,10 +44,10 @@ class EditActivity : AppCompatActivity() {
         val name = findViewById<EditText>(R.id.name_edit).text
         editor.putString("name", "$name")
 
-        //性別のセット
+        // 性別のセット
         val selectedRadioButtonId = findViewById<RadioGroup>(R.id.radioGroup).checkedRadioButtonId
-        val sex = findViewById<RadioButton>(selectedRadioButtonId)
-        editor.putString("sex","$sex")
+        val sex = findViewById<RadioButton>(selectedRadioButtonId).text
+        editor.putString("sex", "$sex")
 
         //メールアドレスのセット
         val mailAddress = findViewById<EditText>(R.id.mail_edit).text
